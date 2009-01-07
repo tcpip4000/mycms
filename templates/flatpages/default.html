@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Cuerpo de Bomberos de Cali - {{ flatpage.title }}{% endblock %}
+
+{% block css_files %}
+    <link type="text/css" rel="stylesheet" href="{{MEDIA_URL}}/css/{{APP_NAME}}.css" />
+{% endblock %}
+
+{% block js_files %}
+    <script type="text/javascript" src="{{MEDIA_URL}}/js/lib.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}/js/{{APP_NAME}}.js"></script>
+    <script  type="text/javascript">
+        var MEDIA_URL = "{{MEDIA_URL}}";
+        var APP_URL   = "{{APP_URL}}";
+    </script>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        {#{ USER_MENU }#}
+    </div>
+    <div class="separator">
+        &nbsp;
+    </div>
+{% endblock %}
+
+{% block menu %}
+    {% if MENU %}
+        <div class="menu">
+            <form name="app_menu_form" action="#">
+                {#{ MENU }#}
+            </form>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block msgs %}
+{% endblock %}
+
+{% block content %}
+    {{ flatpage.content }} 
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        Derechos Reservados &copy; Bomberos de Cali {{CURRENT_YEAR}}
+    </div>
+{% endblock %}
+
+{% block ads %}
+    <div class="ads">
+        <a href="http://www.er-technology.com" onclick="blur();" title="er-tech" target="_blank"><img alt="er-tech" src="{{MEDIA_URL}}/img/powered/byaddo.gif" /></a>
+    </div>
+{% endblock %}
+
+

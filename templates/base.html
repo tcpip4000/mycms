@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}" >
+
+    <head>
+        <meta http-equiv="Content-Type" content="{{ DEFAULT_CONTENT_TYPE }};charset={{ DEFAULT_CHARSET }}" />
+        <meta http-equiv="Content-Language" content="es-co" />              
+        <title>{% block title %}{% endblock %}{% block extra_title %}{% endblock %}</title>
+
+        {% block css_files %}{% endblock %}
+        {% block extra_css_files %}{% endblock %}
+
+        {% block js_files %}{% endblock %}
+        {% block extra_js_files %}{% endblock %}
+
+	<meta name="robots" content="NONE,NOARCHIVE" />
+    </head>
+
+    <body>
+        <div class="container">
+            {% block header  %}{% endblock %}
+            {% block menu    %}{% endblock %}
+            {% block msgs    %}{% endblock %}
+            {% block content %}{% endblock %}
+            {% block footer  %}{% endblock %}
+            {% block ads     %}{% endblock %}
+        </div>
+    </body>
+
+</html>
