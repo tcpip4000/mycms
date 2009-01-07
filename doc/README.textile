@@ -1,0 +1,22 @@
+h2. README
+
+* ER Technology
+* Author: Juan P Daza P
+* Year: 2009
+* Purpose: Create a basic CMS in django
+
+h2. Prerequisites
+
+* Django framework 1.0.X or better have to be installed "django":http://www.djangoproject.com/
+
+h2. Build
+
+h2. Test
+
+h2. Bibliography
+
+Some documentation you must read:
+* James Bennet, Apress Practical Django Projects
+
+h2. Internet resources
+
