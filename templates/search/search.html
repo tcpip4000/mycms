@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Search</title>
+  </head>
+  <body>
+    {% if results %}
+        <p>You searched for "{{ query }}"; the results are listed below.</p>
+        <ul>
+           {% for page in results %}
+             <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+           {% endfor %}
+        </ul>
+    {% else %}
+        {% if query %}
+            <p>No results found for {{ query }}</p>
+        {% else %}
+            <p>Type a search query into the text box and press Submit</p>
+        {% endif %}
+    {% endif %}
+  </body>
+</html>
+

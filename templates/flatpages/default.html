@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+
+
 {% block title %}Cuerpo de Bomberos de Cali - {{ flatpage.title }}{% endblock %}
 
 {% block css_files %}
@@ -39,6 +41,11 @@
 {% endblock %}
 
 {% block content %}
+    <form method="get" action="/search/">
+      <p><label for="id_q">Search:</label>
+      <input type="text" name="q" id="id_q" />
+      <input type="submit" value="Submit" /></p>
+    </form>
     {{ flatpage.content }} 
 {% endblock %}
 
